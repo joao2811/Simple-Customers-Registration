@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="533.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+  <tabs>
+      <Tab text="Home Page">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="32.0" layoutY="113.0" prefHeight="58.0" prefWidth="470.0" text="Welcome To Simple Customer Service" textAlignment="CENTER">
+                     <font>
+                        <Font name="News706 BT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="199.0" text="Functionalities" textFill="#e40c0c">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="246.0" text="1.  Register Customer">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="264.0" text="2.  Update Record">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="282.0" text="3.  Delete Customer">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="191.0" layoutY="300.0" text="4.  View Clients">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="img1" fitHeight="81.0" fitWidth="108.0" layoutX="214.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="bt4" layoutX="14.0" layoutY="326.0" mnemonicParsing="false" onAction="#onBt5Action" prefHeight="31.0" prefWidth="119.0" text="Reset">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab text="Register Customer">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="171.0" layoutY="92.0" text="Register Customer" textFill="#e10909">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="127.0" text="Client Name:">
+                     <font>
+                        <Font name="News706 BT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tbx1" layoutX="14.0" layoutY="150.0" prefHeight="25.0" prefWidth="507.0">
+                     <font>
+                        <Font name="Modern No. 20" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="13.0" layoutY="175.0" text="Client Email:">
+                     <font>
+                        <Font name="News706 BT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tbx2" layoutX="13.0" layoutY="198.0" prefHeight="25.0" prefWidth="507.0">
+                     <font>
+                        <Font name="Modern No. 20" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="223.0" text="Client Birthday:">
+                     <font>
+                        <Font name="News706 BT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="tbx_birt1" layoutX="14.0" layoutY="246.0" prefHeight="25.0" prefWidth="504.0" />
+                  <Button fx:id="bt1" layoutX="205.0" layoutY="298.0" mnemonicParsing="false" onAction="#onBt1Action" prefHeight="35.0" prefWidth="124.0" text="Register">
+                     <font>
+                        <Font name="Georgia Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="img2" fitHeight="81.0" fitWidth="108.0" layoutX="223.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ficha.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Update Record">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="table1" layoutX="17.0" layoutY="261.0" prefHeight="96.0" prefWidth="502.0">
+                    <columns>
+                        <TableColumn fx:id="c1" prefWidth="62.0" text="ID Client" />
+                        <TableColumn fx:id="c2" prefWidth="120.0" text="Client Name" />
+                        <TableColumn fx:id="c3" prefWidth="164.0" text="Client Email" />
+                        <TableColumn fx:id="c4" prefWidth="155.0" text="Date Birthday" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="200.0" layoutY="90.0" text="Update Record">
+                     <font>
+                        <Font name="News706 BT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="143.0" text="Number ID:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="spinner1" layoutX="70.0" layoutY="159.0" />
+                  <Button fx:id="bt2" layoutX="70.0" layoutY="200.0" mnemonicParsing="false" onAction="#onBt2Action" prefHeight="25.0" prefWidth="149.0" text="Set Update">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="299.0" layoutY="125.0" text="Name Client:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tbx3" layoutX="299.0" layoutY="141.0" prefHeight="25.0" prefWidth="221.0">
+                     <font>
+                        <Font name="Modern No. 20" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="299.0" layoutY="165.0" text="Email Client:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tbx4" layoutX="299.0" layoutY="181.0" prefHeight="25.0" prefWidth="221.0">
+                     <font>
+                        <Font name="Modern No. 20" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="299.0" layoutY="206.0" text="Date Birthday:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="tbx_birt2" layoutX="299.0" layoutY="222.0" prefHeight="25.0" prefWidth="220.0" />
+                  <ImageView fx:id="img3" fitHeight="72.0" fitWidth="96.0" layoutX="232.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@loading.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Delete Customer">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="204.0" layoutY="114.0" text="Number ID:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="spinner2" layoutX="193.0" layoutY="142.0" />
+                  <Button fx:id="bt3" layoutX="192.0" layoutY="172.0" mnemonicParsing="false" onAction="#onBt3Action" prefHeight="36.0" prefWidth="149.0" text="Delete Customer">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="table2" layoutX="14.0" layoutY="222.0" prefHeight="135.0" prefWidth="506.0">
+                    <columns>
+                      <TableColumn fx:id="c5" prefWidth="59.0" text="ID Client" />
+                      <TableColumn fx:id="c6" prefWidth="121.0" text="Name Client" />
+                        <TableColumn fx:id="c7" prefWidth="186.0" text="Email Client" />
+                        <TableColumn fx:id="c8" prefWidth="139.0" text="Date Birthday" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="192.0" layoutY="80.0" text="Delete Customer" textFill="#d70e0e">
+                     <font>
+                        <Font name="News706 BT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="img4" fitHeight="71.0" fitWidth="95.0" layoutX="231.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@delet.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="View Clients">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="table3" layoutX="14.0" layoutY="156.0" prefHeight="201.0" prefWidth="506.0">
+                    <columns>
+                      <TableColumn fx:id="c9" prefWidth="64.0" text="ID Client" />
+                      <TableColumn fx:id="c10" prefWidth="92.0" text="Name Client" />
+                        <TableColumn fx:id="c11" prefWidth="203.0" text="Email Client" />
+                        <TableColumn fx:id="c12" prefWidth="146.0" text="Date Birthday" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="14.0" text="Client Name:">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tbx5" layoutX="14.0" layoutY="32.0" prefHeight="25.0" prefWidth="172.0">
+                     <font>
+                        <Font name="Modern No. 20" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="57.0" text="Client Email:">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tbx6" layoutX="14.0" layoutY="75.0" prefHeight="25.0" prefWidth="172.0">
+                     <font>
+                        <Font name="Modern No. 20" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="14.0" layoutY="100.0" text="Client Birthday">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="tbx_birt3" layoutX="15.0" layoutY="118.0" prefHeight="25.0" prefWidth="171.0" />
+                  <Button fx:id="bt4" layoutX="241.0" layoutY="63.0" mnemonicParsing="false" onAction="#onBt4Action" prefHeight="37.0" prefWidth="169.0" text="Search Client">
+                     <font>
+                        <Font name="News706 BT Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
